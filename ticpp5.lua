@@ -64,14 +64,14 @@ project "TiCPP"
 	--
 	-- TinyXML++ dll
 	--
-	-if _OPTIONS["ticpp-shared"] then
-	-	kind 					"SharedLib"
-	-else
-	-	kind 					"StaticLib"
-	-	--if not ticpp.GetCustomValue( "targetdir" ) then
-	-		--targetdir( solution().basedir .. "/lib" )
-	-	--end
-	-end
+	if _OPTIONS["ticpp-shared"] then
+		kind 					"SharedLib"
+	else
+		kind 					"StaticLib"
+		--if not ticpp.GetCustomValue( "targetdir" ) then
+			--targetdir( solution().basedir .. "/lib" )
+		--end
+	end
 	
 	targetdir ("lib/%{outputdir}")
 	objdir ("%{outputdir}")
