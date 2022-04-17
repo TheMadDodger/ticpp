@@ -79,10 +79,12 @@ project "TiCPP"
 	--
 	-- Dynamic Runtime
 	--
-	if not _OPTIONS["dynamic-runtime"] then
-		staticruntime					"On"
-	end
+	--if not _OPTIONS["dynamic-runtime"] then
+	--	staticruntime					"On"
+	--end
 
+	staticruntime					"Off"
+	
 	--
 	-- Operating Systems specific
 	--
